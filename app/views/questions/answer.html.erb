@@ -1,0 +1,16 @@
+<div class="question-header">
+  <h2><%= @question %></h2>
+  <p>- you</p>
+</div>
+
+<div class="answer-header">
+  <% if @question == 'I am going to work' %>
+    <h2>Great!</h2>
+    <p>- your coach</p>
+  <% elsif @question.include?('?') %>
+    <h2>Silly question, get dressed and go to work!</h2>
+    <p>- your coach</p>
+  <% else %> <h2>I don't care, get dressed and go to work!</h2>
+    <p>- your coach</p>
+  <% end %>
+</div>
